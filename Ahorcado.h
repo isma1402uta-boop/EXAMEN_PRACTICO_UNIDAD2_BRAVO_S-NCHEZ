@@ -6,12 +6,15 @@
 
 class Ahorcado {
 private:
-    std::vector<std::string> palabras;
-    int intentos;
+    std::vector<std::string> palabrasNivel1; // Vocabulario: misiones, rangos
+    std::vector<std::string> palabrasNivel2; // Vocabulario: penalizaciones, sistemas
+    int intentosMaximos;
+    bool esLetraValida(char c); // Fase 4: Robustez
 
 public:
     Ahorcado();
-    void iniciarJuego(); // Vocabulario: misiones, rangos, penalizaciones [cite: 211]
+    void mostrarMenu(); 
+    void iniciarJuego(std::vector<std::string> listaPalabras);
 };
 
 #endif
